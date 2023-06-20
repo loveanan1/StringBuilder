@@ -1,0 +1,13 @@
+try
+{ productPrice = Integer.parseInt(integer); } 
+catch (NumberFormatException ex)
+{ } 
+// fail silently without giving any feedback
+
+
+try 
+{ productPrice = Integer.parseInt(integer); } 
+catch (NumberFormatException ex) 
+{unreadablePrices.add(productPrice); // handle error
+log.error("Cannot read price : ", productPrice );// proper and meaningful message
+}
